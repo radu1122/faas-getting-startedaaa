@@ -1,0 +1,16 @@
+name: functions-appaaa
+region: us-east-1
+yamlVersion: 2
+backend:
+    path: ./
+    language:
+        name: js
+        packageManager: npm
+    functions:
+        - name: hello-world-function
+          path: ./
+          entry: index.mjs
+          handler: handler
+    scripts:
+        deploy:
+            - npm install
